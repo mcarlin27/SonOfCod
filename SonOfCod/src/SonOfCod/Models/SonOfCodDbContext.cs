@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace SonOfCod.Models
 {
-    public class SonOfCodDbContext : DbContext
+    public class SonOfCodDbContext : IdentityDbContext<ApplicationUser>
     {
         public SonOfCodDbContext()
         {
@@ -16,8 +17,7 @@ namespace SonOfCod.Models
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SonOfCod; integrated security=True");
         }
 
-        public SonOfCodDbContext(DbContextOptions<SonOfCodDbContext> options)
-            : base(options)
+        public SonOfCodDbContext(DbContextOptions options) : base(options)
         {
         }
 
