@@ -10,6 +10,7 @@ namespace SonOfCod.Tests
         {
             //Arrange
             var product = new Product();
+            product.Name = "Alaska Pollock";
 
             //Act
             var result = product.Name;
