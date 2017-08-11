@@ -1,0 +1,27 @@
+﻿@model SonOfCod.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<hr />
+@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+@Html.DisplayNameFor(model => model.ScientificName): @Html.DisplayFor(model => model.ScientificName)
+@Html.DisplayNameFor(model => model.MarketName): @Html.DisplayFor(model => model.MarketName)
+@Html.DisplayNameFor(model => model.PrimarySource): @Html.DisplayFor(model => model.PrimarySource)
+@Html.DisplayNameFor(model => model.Season): @Html.DisplayFor(model => model.Season)
+@Html.DisplayNameFor(model => model.FishingMethod): @Html.DisplayFor(model => model.FishingMethod)
+@Html.DisplayNameFor(model => model.MaxSize): @Html.DisplayFor(model => model.MaxSize)
+@Html.DisplayNameFor(model => model.AverageSize): @Html.DisplayFor(model => model.AverageSize)
+@Html.DisplayNameFor(model => model.Summary): @Html.DisplayFor(model => model.Summary)
+@Html.DisplayNameFor(model => model.ProductFormFresh): @Html.DisplayFor(model => model.ProductFormFresh)
+@Html.DisplayNameFor(model => model.ProductFormFrozen): @Html.DisplayFor(model => model.ProductFormFrozen)
+@Html.DisplayNameFor(model => model.StorageHandling): @Html.DisplayFor(model => model.StorageHandling)
+@Html.DisplayNameFor(model => model.CookingSuggestion): @Html.DisplayFor(model => model.CookingSuggestion)
+@Html.DisplayNameFor(model => model.SellingPoints): @Html.DisplayFor(model => model.SellingPoints)
+@Html.DisplayNameFor(model => model.Defects): @Html.DisplayFor(model => model.Defects)
+@Html.DisplayNameFor(model => model.Cost): @Html.DisplayFor(model => model.Cost)
+
+<p>@Html.ActionLink("Back to list view", "Index")</p>

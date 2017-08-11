@@ -1,0 +1,19 @@
+﻿@model IEnumerable<SonOfCod.Models.Product>
+
+@{
+    ViewData["Title"] = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Son Of Cod</h2>
+<ul>
+    @foreach (var listProduct in Model)
+    {
+        <li>
+            <div>
+                @Html.DisplayFor(modelLocation => listProduct.Name)
+            @Html.ActionLink("", "Details", new { id = listProduct.ProductId })
+        </div>
+    </li>
+    }
+</ul>
