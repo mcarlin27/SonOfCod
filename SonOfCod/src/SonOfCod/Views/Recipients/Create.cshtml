@@ -1,0 +1,29 @@
+﻿@model SonOfCod.Models.Recipient
+@{
+    ViewData["Title"] = "Join Mailing List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Join Our Mailing List</h2>
+<hr />
+<h4>Sign Up</h4>
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email)
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.Phone)
+        @Html.TextBoxFor(model => model.Phone)
+    </p>
+
+    <input type="submit" value="Submit" />
+}
