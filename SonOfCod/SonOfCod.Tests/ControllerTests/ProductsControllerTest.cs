@@ -21,6 +21,18 @@ namespace SonOfCod.Tests
             Assert.IsType<ViewResult>(result);
         }
         [Fact]
+        public void Get_ModelList_Index_Test()
+        {
+            //Arrange
+            ViewResult indexView = new ProductsController().Index() as ViewResult;
+
+            //Act
+            var result = indexView.ViewData.Model;
+
+            //Assert
+            Assert.IsType<List<Product>>(result);
+        }
+        [Fact]
         public void Get_ViewResult_Details_Test()
         {
             //Arrange
