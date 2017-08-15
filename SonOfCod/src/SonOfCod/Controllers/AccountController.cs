@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using SonOfCod.Models;
 using System.Threading.Tasks;
 using SonOfCod.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SonOfCod.Controllers
 {
@@ -65,6 +66,12 @@ namespace SonOfCod.Controllers
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index");
+        }
+
+        [Authorize]
+        public ActionResult Newsletter()
+        {
+            return View(_db.Recipients);
         }
     }
 }

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<SonOfCod.Models.Recipient>
+
+@{
+    ViewData["Title"] = "Newsletter Recipients";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Son Of Cod Newsletter Recipients</h2>
+<ul>
+    @foreach (var listRecipient in Model)
+    {
+        <li>
+            <div>
+                @Html.DisplayFor(recipientName => listRecipient.Name)
+                @Html.DisplayFor(recipientEmail => listRecipient.Email)
+            </div>
+        </li>
+    }
+</ul>
