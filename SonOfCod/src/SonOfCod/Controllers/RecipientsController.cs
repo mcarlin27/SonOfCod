@@ -15,9 +15,9 @@ namespace SonOfCod.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Product product)
+        public IActionResult Create(Recipient recipient)
         {
-            db.Products.Add(product);
+            db.Recipients.Add(recipient);
             db.SaveChanges();
             return RedirectToAction("Create");
         }
