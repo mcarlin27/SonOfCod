@@ -20,17 +20,20 @@
                     @Html.ActionLink("Products", "Index", "Products")
                 </li>
                 <li class="li-nav">
-                    @Html.ActionLink("Admin", "Index", "Account")
-                </li>
-                <li class="li-nav">
                     @Html.ActionLink("About", "Marketing", "Home")
                 </li>
                 <li class="li-nav">
                     @Html.ActionLink("Newsletter Sign Up", "Create", "Recipients")
                 </li>
                 <li class="li-nav">
-                    @Html.ActionLink("Newsletter Recipients", "Newsletter", "Account")
+                    @Html.ActionLink("Admin", "Index", "Account")
                 </li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="li-nav">
+                        @Html.ActionLink("Newsletter Recipients", "Newsletter", "Account")
+                    </li>
+                }
             </ul>
         </div>
     </nav>
