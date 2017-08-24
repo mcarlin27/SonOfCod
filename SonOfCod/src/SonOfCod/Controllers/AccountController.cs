@@ -36,13 +36,30 @@ namespace SonOfCod.Controllers
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index");
+                return await LoginNewUser(user, model.Password);
             }
             else
             {
                 return View();
             }
         }
+
+        [HttpPost]
+        public async Task<IActionResult> LoginNewUser(ApplicationUser user, string password)
+        {
+
+            Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user.UserName, password, isPersistent: true, lockoutOnFailure: false);
+            if (result.Succeeded)
+            {
+
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return RedirectToAction("Register");
+            }
+        }
+
         public IActionResult Login()
         {
             return View();
