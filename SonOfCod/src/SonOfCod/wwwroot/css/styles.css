@@ -1,0 +1,83 @@
+﻿body {
+    margin: 0;
+    padding-top: 80px;
+    color: navy;
+}
+
+.navbar {
+  background-color: #FEFEFE;
+  color: #034078;
+  width: 100vw;
+  margin-top: -80px;
+  align-items: center;
+  justify-content: space-between;
+  height: 85px;
+  display: flex;
+}
+
+.navbar-brand p a {
+    text-decoration: none;
+    font-size: 40px;
+    color: #034078;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 20px;
+}
+
+.navbar-links {
+    text-decoration: none;
+    font-size: 25px;
+    color: #005CB9;
+    margin-right: 20px;
+}
+
+.li-nav {
+    display: inline;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #005CB9;
+   
+    display: inline-block;
+}
+
+.navbar-links li a:hover {
+    text-underline-position: below;
+    text-decoration: underline;
+}
+
+.index-text {
+  background-color: #005CB9;
+  color: #FEFEFE;
+  text-align: center;
+  margin-top: -35px;
+  width: 100vw;
+  margin-left: -8px;
+  height: 400px;
+  width: auto;
+}
+
+.index-title h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 50px;
+}
+
+.index-text index-text-h4 {
+    display: flex;
+    text-align: center;
+}
+
+.index-text .index-text-h4 {
+    padding-bottom: 40px;
+    padding-top: 30px;
+}
+
+.index-text p {
+    display: flex;
+    background-color: #FFF;
+    color: #001F54;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
