@@ -49,7 +49,7 @@ Open the project in Visual Studio.
 
 ## Known Bugs
 
-_No known bugs._
+_Image carousel doesn't work._
 
 ## Support and contact details
 
